@@ -1,6 +1,7 @@
+#imports de los requests y el json para mandar el cuerpo del mensaje.
 import requests
 import json
-
+# try catch del servico de whatsapp para enviar los mensajes, 
 def SendMessageWhatsapp(data):
     try:
       

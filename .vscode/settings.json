@@ -2,5 +2,7 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
-    "python.formatting.provider": "none"
+    "python.formatting.provider": "none",
+    "appService.defaultWebAppToDeploy": "/subscriptions/c0f2aa23-47e4-439c-95c3-c468133faa8c/resourceGroups/ChatBot-Python/providers/Microsoft.Web/sites/Whatsapp-Python-WebAp",
+    "appService.deploySubpath": "."
 }
