@@ -2,6 +2,7 @@ from flask import Flask, request
 import util
 import whatsappService
 import texts
+import random
 
 app = Flask(__name__)
 
@@ -61,49 +62,31 @@ def ProcessMesage(text, number):
     text= text.lower()
     listData = []
 
-    if "hola" in text or "option" in text:
-        text1=texts.obtener_saludo()
-        data=util.TextMessage(text1, number)
-        dataMenu=util.ListMessage(number)
-
+    if any(keyword in text for keyword in texts.saludo):
+        text1 = random.choice(texts.resp_saludo)
+        data = util.TextMessage(text1, number)
         listData.append(data)
-        listData.append(dataMenu)
-
-    elif "gracias" in text:
-        text2=texts.obtener_despedida()
-        data=util.TextMessage(text2, number)
+    
+    elif any(keyword in text for keyword in texts.gracias):
+        text2 = random.choice(texts.agradecer)
+        data = util.TextMessage(text2, number)
+        data_image = util.ImageMessage(number)
         listData.append(data)
+        listData.append(data_image)
 
-    elif "manejo del estrés" in text:
-        text3=texts.obtener_consejos_de_manejo_de_estres()
-        data=util.TextMessage(text3, number)
-        listData.append(data)
-
-    elif "crisis o emergencia" in text:
-        data=util.TextMessage('''*Comunicate con estos numeros si estas presentando una crisis:*
-                                  *Servicio de Orientación y Consejería Telefónica en Salud – Infosalud:* 0800-10828
-                                    ''',number)
+    elif any(keyword in text for keyword in texts.estado_animo_bueno):
+        text3=random.choice(texts.resp_animo_bueno)
+        data= util.TextMessage(text3,number)
         listData.append(data)
 
-    elif "hablar con un asesor" in text:
-        text5= texts.obtener_asesor()
-        data=util.TextMessage(text5, number)
-        listData.append(data)
-
-    elif "relaciones sanas" in text:
-        text6=texts.obtener_consejo_relaciones_sanas()
-        data=util.TextMessage(text6, number)  
-        
-        listData.append(data)      
-
-    elif "tu bienestar" in text:
-        data=util.TextMessage("*Numero de contacto:* \n 381-3695", number)  
+    elif any(keyword in text for keyword in texts.estado_animo_malo):
+        text4=random.choice(texts.resp_animo_malo)
+        data= util.TextMessage(text4,number)
         listData.append(data)   
-
-
+        
     else:
-        text8=texts.obtener_error()
-        data = util.TextMessage(text8, number)
+        error=random.choice(texts.error)
+        data = util.TextMessage(error, number)
         dataMenu = util.ListMessage(number)
         listData.append(data)
         listData.append(dataMenu)
@@ -114,35 +97,35 @@ def ProcessMesage(text, number):
 
 
 
-    
-def GenerateMessage(text, number):
-
-
-    text=text.lower()
-    if "text" in text:
-        data = util.TextMessage("Text", number)
-    if "format" in text:
-        data = util.TextFormatMessage(number)
-
-    if "image" in text:
-        data = util.ImageMessage(number)
-    if "video" in text:
-        data = util.VideoMessage(number)
-    if "audio" in text:
-        data = util.AudioMessage(number)
-    if "document" in text:
-        data = util.DocumentMessage(number)
-    if "location" in text:
-        data = util.LocationMessage(number)
-    if "button" in text:
-        data = util.ButtonMessage(number)    
-    if "list" in text:
-        data= util.ListMessage(number) 
-
-
-    whatsappService.SendMessageWhatsapp(data)
-
-
 
 if __name__ == "__main__":
     app.run()
+
+
+
+    
+# def GenerateMessage(text, number):
+
+
+#     text=text.lower()
+#     if "text" in text:
+#         data = util.TextMessage("Text", number)
+#     if "format" in text:
+#         data = util.TextFormatMessage(number)
+#     if "image" in text:
+#         data = util.ImageMessage(number)
+#     if "video" in text:
+#         data = util.VideoMessage(number)
+#     if "audio" in text:
+#         data = util.AudioMessage(number)
+#     if "document" in text:
+#         data = util.DocumentMessage(number)
+#     if "location" in text:
+#         data = util.LocationMessage(number)
+#     if "button" in text:
+#         data = util.ButtonMessage(number)    
+#     if "list" in text:
+#         data= util.ListMessage(number) 
+
+
+#     whatsappService.SendMessageWhatsapp(data)

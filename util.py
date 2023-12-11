@@ -30,6 +30,24 @@ def TextMessage(text, number):
     }
     return data
 
+
+#JSON del mensaje que envia texto e imagen
+def MultimediaMessage(text, number, image_url):
+    data = {
+        "messaging_product": "whatsapp",
+        "to": number,
+        "type": "image",
+        "image": {
+            "link": {
+                "url": image_url,
+            },
+            "caption": text,  # Aquí agregamos el texto como pie de foto de la imagen
+        }
+    }
+    return data
+
+
+
 #JSON del mensaje en diferentes estilos
 def TextFormatMessage(number):
     data = {
@@ -48,7 +66,7 @@ def ImageMessage(number):
         "to": number,
         "type": "image",
         "image": {
-            "link": "https://imgs.search.brave.com/C-DnW3dZHGbutMvVebRkoDkhMjBhpFMowldif9GvX9E/rs:fit:860:0:0/g:ce/aHR0cDovL3N0YXRp/Yy5pcGF1dGEuY29t/L3VwbG9hZHMvMjAy/Mi8wNC9Nb3JhLU1p/Y3JvZG9zaXMtRnJv/bnRhbC1pUGF1dGEu/anBn"
+            "link": "https://user-images.githubusercontent.com/138251036/278851167-db190f85-773b-4d78-a208-05fa3b169424.JPG"
         },
     }
     return data
