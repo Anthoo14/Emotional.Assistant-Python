@@ -79,10 +79,50 @@ def ProcessMesage(text, number):
         data= util.TextMessage(text3,number)
         listData.append(data)
 
+    elif any(keyword in text for keyword in texts.html):
+        text9 = random.choice(texts.resp_html)
+        data = util.TextMessage(text9, number)
+        listData.append(data)
+
     elif any(keyword in text for keyword in texts.estado_animo_malo):
         text4=random.choice(texts.resp_animo_malo)
         data= util.TextMessage(text4,number)
-        listData.append(data)   
+        listData.append(data)
+        
+    elif any(keyword in text for keyword in texts.option1):
+        text5=random.choice(texts.resp_option1)
+        data=util.TextMessage(text5, number)
+        listData.append(data) 
+    
+    elif any(keyword in text for keyword in texts.test):
+        text13=random.choice(texts.test1)
+        data=util.TextMessage(text13, number)
+        listData.append(data) 
+
+    elif any(keyword in text for keyword in texts.option2):
+        text6=random.choice(texts.resp_option2)
+        data=util.TextMessage(text6, number)
+        listData.append(data)
+
+    elif any(keyword in text for keyword in texts.option3):
+        text7=random.choice(texts.resp_option3)
+        data=util.TextMessage(text7, number)
+        listData.append(data) 
+
+    elif any(keyword in text for keyword in texts.option4):
+        text8=random.choice(texts.resp_option4)
+        data=util.TextMessage(text8, number)
+        listData.append(data)  
+
+    elif any(keyword in text for keyword in texts.option5):
+        text10=random.choice(texts.resp_option5)
+        data=util.TextMessage(text10, number)
+        listData.append(data)  
+
+    elif any(keyword in text for keyword in texts.option6):
+        text11=random.choice(texts.resp_option1)
+        data=util.TextMessage(text11, number)
+        listData.append(data)        
         
     else:
         error=random.choice(texts.error)

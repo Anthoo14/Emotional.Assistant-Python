@@ -9,7 +9,7 @@ resp_saludo= [
 ]
 
 estado_animo_bueno=[
-    "excelente", "feliz", "emocionado","inspirado","tranquilo"
+    "bien ","excelente", "feliz", "emocionado","inspirado","tranquilo"
 ]
 
 resp_animo_bueno=[
@@ -29,20 +29,24 @@ estado_animo_malo=[
 
 
 resp_animo_malo=[
-"Entiendo que eso te haga sentir abrumado. ¿En qué puedo ayudarte?",
-"A veces, todos necesitamos un poco de apoyo. ¿En qué puedo ayudarte a sentirte mejor?",
-"Lamento que estés pasando por esto. ¿Cómo puedo ser de apoyo?",
-"El auto-cuidado es importante. ¿Necesitas consejos para sentirte mejor?"
+"Entiendo que es eso te haga sentir abrumado. Cuentame un poco",
+"A veces, todos necesitamos un poco de apoyo. Dime porque te sientes asi",
+"Lamento que estés pasando por esto. Cuentame para ayudarte"
 ]
 
 
+resp_html=[
 
+    "Si necesitas reservar una cita, ingresa a:\n http://127.0.0.1:8000"
 
+]
 
+html = [
+    "cita",
+    "reserva",
+]
 
-
-
-
+test2=["¿porque te sientes asi?","¿cual es el motivo de ese sentimiento?"]
 
 error =[
     "No logro entenderte 😢",
@@ -65,9 +69,81 @@ agradecer=[
     "suerte, un abrazo.\nY jamás olvides que:"
 ]
 
+test=["me pega"]
+
+test1=["Mmh, entiendo... no está bien sentirse así, no te abrumes. Tengo una idea, por qué no reservas una cita? Una ayuda profesional te haría sentir mejor: http://127.0.0.1:8000"]
+
+option1=["manejo", "estres"]
+
+option2=["crisis","emergencia"]
+option3=["hablar", "asesor"]
+option4=["relaciones", "sanas"]
+option5=["tu", "bienestar"]
+option6=["consejos"]
 
 
+resp_option1=["Practica la meditación para aliviar el estrés.",
+    "Realiza ejercicios de respiración profunda para relajarte.",
+    "Establece límites saludables en tu trabajo y vida personal.",
+    "Encuentra tiempo para hacer actividades que disfrutes.",
+    "Habla con alguien de confianza sobre tus preocupaciones.",
+    "Aprende a decir 'no' cuando sea necesario.",
+    "Dedica tiempo para el autocuidado y la relajación.",
+    "Organiza tu tiempo y establece metas alcanzables.",
+    "Prioriza las tareas y no te sobreexijas.",
+    "Practica actividades que te brinden alegría y diversión."]
 
+
+resp_option2=[ "Mantén la calma y respira profundamente.",
+    "Evalúa la situación y prioriza tu seguridad.",
+    "Busca ayuda inmediata si es necesario.",
+    "Comunica claramente la emergencia a otros.",
+    "Sigue procedimientos de seguridad establecidos.",
+    "Mantén contacto con familiares o amigos.",
+    "Ten a mano números de emergencia importantes.",
+    "Escucha a las autoridades y sigue sus instrucciones.",
+    "Si es posible, asiste a un lugar seguro.",
+    "Recuerda que la ayuda está disponible; no estás solo."]
+
+resp_option3=[  "Por favor, espera un momento. Estamos conectando contigo.",
+    "Estamos buscando el próximo asesor disponible para ayudarte. Gracias por tu paciencia.",
+    "Tu consulta es importante para nosotros. Estamos preparando a un asesor para atenderte. Por favor, espera.",
+    "Estamos gestionando tu solicitud. En breve, un asesor estará disponible para ayudarte.",
+    "Gracias por esperar. Estamos a punto de conectarte con un asesor capacitado para responder a tus preguntas."]
+
+resp_option4=[  "Comunicación abierta: Fomenta la comunicación honesta y abierta con tu pareja.",
+    "Respeto mutuo: Valora las opiniones, necesidades y límites de tu pareja.",
+    "Establecer límites: Es importante definir y respetar límites personales y de la relación.",
+    "Empatía: Practica la empatía para entender y conectar con los sentimientos de tu pareja.",
+    "Solución de conflictos: Aprende a resolver desacuerdos de manera constructiva y respetuosa.",
+    "Tiempo para uno mismo: Mantén tiempo para tus propios intereses y actividades.",
+    "Apoyo mutuo: Estén allí el uno para el otro en los momentos buenos y malos.",
+    "Celebrar éxitos: Celebra los logros y éxitos de tu pareja.",
+    "Aprender y crecer juntos: Mantengan una actitud de aprendizaje y crecimiento continuo.",
+    "Mostrar afecto: Exprésale a tu pareja tu amor y aprecio de diversas maneras."]
+
+resp_option5=[ "Prioriza tu salud mental. Dedica tiempo a cuidar tu mente y emociones.",
+    "Establece rutinas saludables para mejorar tu bienestar general.",
+    "Practica la gratitud diaria. Reflexiona sobre las cosas positivas en tu vida.",
+    "Incorpora ejercicio regular en tu rutina para mejorar tu salud física y mental.",
+    "Asegúrate de obtener suficiente descanso y sueño reparador.",
+    "Fomenta conexiones sociales. Mantén relaciones positivas con amigos y familiares.",
+    "Aprende técnicas de manejo del estrés, como la meditación o la respiración profunda.",
+    "Aliméntate de manera balanceada para apoyar tu salud física y mental.",
+    "Haz cosas que disfrutes regularmente para mantener un equilibrio en tu vida.",
+    "Sé amable contigo mismo. Practica la autocompasión y evita la autocrítica excesiva."]
+
+
+resp_option6=[  "Tómate tiempo para desconectar y descansar.",
+    "Practica la autocompasión: sé amable contigo mismo en momentos difíciles.",
+    "Habla sobre tus sentimientos con amigos o familiares de confianza.",
+    "Establece límites saludables en tus relaciones y actividades diarias.",
+    "Encuentra actividades que te apasionen y te den alegría.",
+    "Aprende técnicas de manejo del estrés, como la meditación o la atención plena.",
+    "Concéntrate en el presente y evita preocuparte demasiado por el futuro.",
+    "Prioriza el sueño adecuado y una rutina de descanso consistente.",
+    "Identifica y desafía pensamientos negativos o autocríticos.",
+    "Busca ayuda profesional si sientes que lo necesitas; no estás solo."]
 
 
 
